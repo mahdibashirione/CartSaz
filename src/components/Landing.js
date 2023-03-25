@@ -1,6 +1,6 @@
 const Landing = () => {
   return (
-    <section className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center">
+    <section className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center mt-[120px]">
       <h1 className="text-[32px] leading-[140%] lg:text-[64px] text-center select-none font-bold mt-[61px]">
         سامانه مدیریت <span className="text-blue-500">هوشمند</span>
         <br /> سفارش های اینترنتی
