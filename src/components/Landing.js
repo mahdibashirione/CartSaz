@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Landing = () => {
   return (
     <section className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center mt-[120px]">
@@ -5,7 +7,7 @@ const Landing = () => {
         سامانه مدیریت <span className="text-blue-500">هوشمند</span>
         <br /> سفارش های اینترنتی
       </h1>
-      <button className="bg-blue-500 active:scale-95 duration-200 text-white rounded-full hover:bg-blue-600 px-[30px] py-4 flex items-center gap-2 my-6">
+      <Link to="/" className="bg-blue-500 active:scale-95 duration-200 text-white rounded-full hover:bg-blue-600 px-[30px] py-4 flex items-center gap-2 my-6">
         <svg
           width="24"
           height="24"
@@ -19,7 +21,7 @@ const Landing = () => {
           />
         </svg>
         مشاهده ویدئو معرفی
-      </button>
+      </Link>
       <p className="max-w-[800px] text-center leading-[29px] select-none text-slate-400">
         کارت ساز آمده تا دیگر نیازی به یادداشت سفارش های خود در دفتر و یا سررسید
         نباشید.به راحتی سفارشات خود را مدیریت کنید و آن ها را تعیین وضعیت
