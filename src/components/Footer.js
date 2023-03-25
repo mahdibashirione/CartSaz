@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="container flex flex-wrap items-center justify-between pt-6 pb-14">
+    <section className="px-8 container flex flex-wrap items-center justify-between pt-6 pb-14">
       <div className="mb-6 w-full h-2 bg-cover bg-[url('/public/svg/border.svg')]"></div>
-      <article className="pr-8 flex gap-7 items-center">
+      <article className="flex gap-7 items-center">
         <Link
           to="/"
           className="w-[132px] h-[48px] bg-cover bg-[url('/public/svg/logo-cart-saz.svg')]"
@@ -13,7 +13,7 @@ const Footer = () => {
           کارت ساز - ۱۴۰۱
         </span>
       </article>
-      <article className="pl-8 flex gap-2">
+      <article className="flex gap-2">
         <Link
           to="/"
           className="w-12 h-12 flex items-center justify-center rounded-full border border-[#ededed] hover:bg-[#ededed]"

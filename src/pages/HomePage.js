@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Options from "../components/Options";
+import WhatIsCartSaz from "../components/WhatIsCartSaz";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <AboutProduct />
       <Options />
       <Banner />
+      <WhatIsCartSaz />
       <Footer />
     </>
   );
