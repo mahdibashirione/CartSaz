@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
   return (
     <section className="px-8 container flex flex-wrap items-center justify-center md:justify-between pt-6 pb-14">
       <div className="mb-6 w-full h-2 bg-cover bg-[url('/public/svg/border.svg')]"></div>
@@ -15,13 +17,34 @@ const Footer = () => {
       </article>
       <ul className="flex md:hidden items-center gap-8 mt-10">
         <li>
-          <Link to="/">آپدیت ها</Link>
+          <Link
+            className={`hover:scale-105 duration-200 ${
+              pathname === "/updates" && "text-blue-500"
+            }`}
+            to="/updates"
+          >
+            آپدیت ها
+          </Link>
         </li>
         <li>
-          <Link to="/">سوالات متداول</Link>
+          <Link
+            className={`hover:scale-105 duration-200 ${
+              pathname === "/questions" && "text-blue-500"
+            }`}
+            to="/questions"
+          >
+            سوالات متداول
+          </Link>
         </li>
         <li>
-          <Link to="/">تماس با ما</Link>
+          <Link
+            className={`hover:scale-105 duration-200 ${
+              pathname === "/contactus" && "text-blue-500"
+            }`}
+            to="/contactus"
+          >
+            تماس با ما
+          </Link>
         </li>
       </ul>
       <article className="flex md:w-auto justify-center mt-[40px] md:mt-0 w-full gap-2">

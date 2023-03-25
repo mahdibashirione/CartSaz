@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const { pathname } = useLocation();
+
   return (
     <header className="w-full fixed top-0 shadow-sm z-50 backdrop-blur-xl">
       <div className="blur-0 px-8 py-5  container flex items-center justify-between">
@@ -11,13 +13,28 @@ const Header = () => {
         <nav className="flex items-center">
           <ul className="hidden md:flex items-center gap-8 ml-[72px]">
             <li>
-              <Link to="/">آپدیت ها</Link>
+              <Link
+                className={`${pathname === "/updates" && "text-blue-500"}`}
+                to="/updates"
+              >
+                آپدیت ها
+              </Link>
             </li>
             <li>
-              <Link to="/">سوالات متداول</Link>
+              <Link
+                className={`${pathname === "/questions" && "text-blue-500"}`}
+                to="/questions"
+              >
+                سوالات متداول
+              </Link>
             </li>
             <li>
-              <Link to="/">تماس با ما</Link>
+              <Link
+                className={`${pathname === "/contactus" && "text-blue-500"}`}
+                to="/contactus"
+              >
+                تماس با ما
+              </Link>
             </li>
           </ul>
           <Link
