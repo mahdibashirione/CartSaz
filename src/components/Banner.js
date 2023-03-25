@@ -1,6 +1,10 @@
 const Banner = () => {
   return (
-    <section className="rounded-lg select-none container mb-[56px] lg:mb-[40px] w-full bg-[url('/public/svg/bg-banner.svg')] py-[65px] lg:py-[40px] bg-no-repeat bg-cover flex flex-col items-center">
+    <section
+      className="rounded-lg select-none container mb-[56px] lg:mb-[40px] w-full bg-[url('/public/svg/bg-banner.svg')] 
+    py-[65px] lg:py-[40px] bg-no-repeat 
+    bg-cover flex flex-col items-center"
+    >
       <h3 className="font-bold text-[32px] leading-[45px] text-white">
         هم اکنون ثبت نام کنید!
       </h3>
@@ -8,7 +12,7 @@ const Banner = () => {
         ثبت نام در کارت ساز رایگان است.همین الان ثبت نام کنید و کارت ساز را تست
         کنید.
       </p>
-      <button className="bg-[#FE3E01] py-4 px-[49.5px] text-white flex items-center gap-2 rounded-full">
+      <button className="bg-[#FE3E01] active:scale-95 duration-200 py-4 px-[49.5px] text-white flex items-center gap-2 rounded-full">
         <svg
           width="25"
           height="24"

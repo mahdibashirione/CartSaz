@@ -1,11 +1,11 @@
 const Landing = () => {
   return (
-    <section className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center border-b-4 border-dashed border-gray-300">
+    <section className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center">
       <h1 className="text-[32px] leading-[140%] lg:text-[64px] text-center select-none font-bold mt-[61px]">
         سامانه مدیریت <span className="text-blue-500">هوشمند</span>
         <br /> سفارش های اینترنتی
       </h1>
-      <button className="bg-blue-500 text-white rounded-full hover:bg-blue-600 px-[30px] py-4 flex items-center gap-2 my-6">
+      <button className="bg-blue-500 active:scale-95 duration-200 text-white rounded-full hover:bg-blue-600 px-[30px] py-4 flex items-center gap-2 my-6">
         <svg
           width="24"
           height="24"
@@ -43,6 +43,7 @@ const Landing = () => {
           />
         </svg>
       </span>
+      <div className="mb-6 w-full h-2 bg-cover bg-[url('/public/svg/border.svg')]"></div>
     </section>
   );
 };
