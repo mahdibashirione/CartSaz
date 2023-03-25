@@ -2,18 +2,29 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="px-8 container flex flex-wrap items-center justify-between pt-6 pb-14">
+    <section className="px-8 container flex flex-wrap items-center justify-center md:justify-between pt-6 pb-14">
       <div className="mb-6 w-full h-2 bg-cover bg-[url('/public/svg/border.svg')]"></div>
-      <article className="flex gap-2 items-center">
+      <article className="w-full md:w-auto flex justify-center gap-x-4 items-center">
         <Link
           to="/"
           className="w-[132px] h-[48px] bg-cover bg-[url('/public/svg/logo-cart-saz.svg')]"
         ></Link>
-        <span className="select-none leading-[29px] text-[#74787c]">
+        <span className="hidden md:block select-none leading-[29px] text-[#74787c]">
           کارت ساز - ۱۴۰۱
         </span>
       </article>
-      <article className="flex gap-2">
+      <ul className="flex md:hidden items-center gap-8 mt-10">
+        <li>
+          <Link to="/">آپدیت ها</Link>
+        </li>
+        <li>
+          <Link to="/">سوالات متداول</Link>
+        </li>
+        <li>
+          <Link to="/">تماس با ما</Link>
+        </li>
+      </ul>
+      <article className="flex md:w-auto justify-center mt-[40px] md:mt-0 w-full gap-2">
         <Link
           to="/"
           className="w-12 h-12 flex items-center justify-center rounded-full border border-[#ededed] hover:bg-[#ededed]"
