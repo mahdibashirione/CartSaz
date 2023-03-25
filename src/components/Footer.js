@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section className="px-8 container flex flex-wrap items-center justify-between pt-6 pb-14">
       <div className="mb-6 w-full h-2 bg-cover bg-[url('/public/svg/border.svg')]"></div>
-      <article className="flex gap-7 items-center">
+      <article className="flex gap-2 items-center">
         <Link
           to="/"
           className="w-[132px] h-[48px] bg-cover bg-[url('/public/svg/logo-cart-saz.svg')]"
