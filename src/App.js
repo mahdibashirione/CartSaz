@@ -12,7 +12,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/questions" element={<QuestionsPage />} />
       <Route path="/contactus" element={<ContactUsPage />} />
-      <Route path="/register" element={<LoginPage />} />
+      <Route path="/register/*" element={<LoginPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
