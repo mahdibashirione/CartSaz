@@ -1,13 +1,45 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Landing = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { scale: 0.5, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+    },
+  };
+
   return (
-    <section className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center mt-[120px]">
-      <h1 className="text-[32px] leading-[140%] lg:text-[64px] text-center select-none font-bold mt-[61px]">
+    <motion.section
+      variants={container}
+      animate="visible"
+      initial="hidden"
+      className="bg-[url('/public/svg/bg-landing.svg')] bg-no-repeat bg-top container px-8 flex flex-col items-center mt-[120px]"
+    >
+      <motion.h1
+        variants={item}
+        className="text-[32px] leading-[140%] lg:text-[64px] text-center select-none font-bold mt-[61px]"
+      >
         سامانه مدیریت <span className="text-blue-500">هوشمند</span>
         <br /> سفارش های اینترنتی
-      </h1>
-      <Link to="/" className="bg-blue-500 active:scale-95 duration-200 text-white rounded-full hover:bg-blue-600 px-[30px] py-4 flex items-center gap-2 my-6">
+      </motion.h1>
+
+      <motion.button
+        variants={item}
+        className="bg-blue-500 active:scale-95 duration-200 text-white rounded-full hover:bg-blue-600 px-[30px] py-4 flex items-center gap-2 my-6"
+      >
         <svg
           width="24"
           height="24"
@@ -21,13 +53,18 @@ const Landing = () => {
           />
         </svg>
         مشاهده ویدئو معرفی
-      </Link>
-      <p className="max-w-[800px] text-center leading-[29px] select-none text-slate-400">
+      </motion.button>
+
+      <motion.p
+        variants={item}
+        className="max-w-[800px] text-center leading-[29px] select-none text-slate-400"
+      >
         کارت ساز آمده تا دیگر نیازی به یادداشت سفارش های خود در دفتر و یا سررسید
         نباشید.به راحتی سفارشات خود را مدیریت کنید و آن ها را تعیین وضعیت
         کنید.حتی به راحتی برگه ارسال پرینت کنید و آن را اختصاصی استفاده کنید.
-      </p>
-      <span className="my-14 animate-bounce">
+      </motion.p>
+
+      <motion.span variants={item} className="my-14 animate-bounce">
         <svg
           width="24"
           height="24"
@@ -44,9 +81,10 @@ const Landing = () => {
             fill="#74787C"
           />
         </svg>
-      </span>
+      </motion.span>
+
       <div className="mb-6 w-full h-2 bg-cover bg-[url('/public/svg/border.svg')]"></div>
-    </section>
+    </motion.section>
   );
 };
 

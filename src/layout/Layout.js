@@ -1,7 +1,5 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
-import WhatIsCartSaz from "../components/WhatIsCartSaz";
 
 const Layout = (Component) => {
   return (props) => {
@@ -9,8 +7,6 @@ const Layout = (Component) => {
       <>
         <Header />
         <main>{<Component {...props} />}</main>
-        <Banner />
-        <WhatIsCartSaz />
         <Footer />
       </>
     );

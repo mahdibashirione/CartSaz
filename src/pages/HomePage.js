@@ -10,6 +10,8 @@ const HomePage = () => {
       <Landing />
       <AboutProduct />
       <Options />
+      <Banner />
+      <WhatIsCartSaz />
     </>
   );
 };

@@ -38,9 +38,9 @@ const Header = () => {
             </li>
           </ul>
           <Link
+            to="/register"
             className="active:scale-95 duration-200 py-3 px-8 text-sm border
           hover:bg-blue-500 hover:text-white border-blue-500 text-blue-500 rounded-lg"
-            to="/"
           >
             ورود یا ثبت نام
           </Link>
